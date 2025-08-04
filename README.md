@@ -2,5 +2,7 @@
 This is my first  GitHub repository 
 <br>
 Author - Vivek kumar keshri
-I have updated this repository to store 
+<br>
+I have updated this repository to store
+<br>
 my code on the operations on the single linked list.
