@@ -1,9 +1,11 @@
+//Operations on single linked list
 #include<stdio.h>
 #include<stdlib.h>
 struct node {
     int data;
     struct node *next;
 };
+//code to create single linked list
 struct node* create(struct node *p,int x) {
 
     if(p==NULL) {
@@ -18,6 +20,7 @@ struct node* create(struct node *p,int x) {
     }
 
 }
+//code to insert element at the begning of the node
 void insertatbeg(struct node **p,int x) {
     struct node *q;
     q=(struct node*)malloc(sizeof(struct node));
@@ -25,6 +28,7 @@ void insertatbeg(struct node **p,int x) {
     q->next=*p;
     *p=q;
 }
+//code to insert element at the end of the node
 void insertatend(struct node *p,int x) {
     struct node *q;
     q=(struct node*)malloc(sizeof(struct node));
@@ -35,6 +39,7 @@ void insertatend(struct node *p,int x) {
     q->data=x;
     q->next=NULL;
 }
+//code to insert element at any node of the linked list
 void insertatany(struct node *p,int key,int x) {
     struct node *q;
     q=(struct node*)malloc(sizeof(struct node));
@@ -45,6 +50,7 @@ void insertatany(struct node *p,int key,int x) {
     q->data=x;
     p->next=q;
 }
+//code to delete element from any node of the single linked list
 struct node* delanynode(struct node *p,int n) {
     int i;
     struct node *q,*r;
@@ -71,6 +77,7 @@ struct node* delanynode(struct node *p,int n) {
     }
     return p;
 }
+//code to treverse/display elements of the single linked list
 void traverse(struct node *p) {
     printf("\nThe list is \t");
     while(p!=NULL) {
@@ -91,7 +98,7 @@ main() {
     printf("\n6 :traverse");
     printf("\n7 :exit");
     do {
-        printf("\nenter choice : ");
+        printf("\nEnter choice : ");
         scanf("%d",&j);
 
         switch(j) {
@@ -102,7 +109,7 @@ main() {
             break;
 
         case 2:
-            printf("Enter new data to insert on the node : ");
+            printf("Enter new data to insert on the begning of the node : ");
             scanf("%d",&val);
             insertatbeg(&head,val);
             break;
@@ -112,9 +119,9 @@ main() {
             insertatend(head,val);
             break;
         case 4:
-            printf("Enter the data you wanter to insert :");
+            printf("Enter the data you want to insert :");
             scanf("%d",&val);
-            printf("Enter key at which you wanted to insert data : ");
+            printf("Enter key at which you want to insert data : ");
             scanf("%d",&key);
             insertatany(head,key,val);
             break;
