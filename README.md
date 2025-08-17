@@ -5,4 +5,4 @@ Author - Vivek kumar keshri
 <br>
 I have updated this repository to store
 <br>
-my code on the operations on the single linked list.
+my code on the operations on the linked list.
